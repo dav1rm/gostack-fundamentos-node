@@ -30,6 +30,7 @@ class CreateTransactionService {
       throw Error('Your balance is insufficient to withdraw');
     }
 
+    // Create new transaction
     const transaction = this.transactionsRepository.create({
       title,
       value,
