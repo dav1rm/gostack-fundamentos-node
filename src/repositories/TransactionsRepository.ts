@@ -24,17 +24,6 @@ class TransactionsRepository {
   }
 
   public getBalance(): Balance {
-    // let income = 0;
-    // let outcome = 0;
-
-    // this.transactions.forEach(transaction => {
-    //   if (transaction.type === 'income') {
-    //     income += transaction.value;
-    //   } else {
-    //     outcome += transaction.value;
-    //   }
-    // });
-
     const balance = this.transactions.reduce(
       (accumulator: Balance, transaction: Transaction) => {
         switch (transaction.type) {
